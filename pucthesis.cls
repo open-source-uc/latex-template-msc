@@ -67,8 +67,8 @@
 
 % Remove chapter from header
 \RequirePackage{fancyhdr}
-\fancypagestyle{plain}{                                                                  %
-\fancyhf{}                                                                                            % clear all header and footer fields
+\fancypagestyle{plain}{                                 %
+\fancyhf{}                                              % clear all header and footer fields
 \fancyfoot[C]{\fontsize{11pt}{11pt}\selectfont\thepage} % except the center
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -80,29 +80,29 @@
 % Add list of contents, figures and tables
 \if \spanish@true 1
 	\def\contentsname{\'INDICE DE CONTENIDOS} %{\'Indice de Contenidos}
-	\def\listfigurename{\'INDICE DE FIGURAS}          %{\'Indice de Figuras}
-	\def\listtablename{\'INDICE DE TABLAS}              %{\'Indice de Tablas}
+	\def\listfigurename{\'INDICE DE FIGURAS}  %{\'Indice de Figuras}
+	\def\listtablename{\'INDICE DE TABLAS}    %{\'Indice de Tablas}
 	\def\refname{REFERENCIAS}
 	\def\bibname{REFERENCIAS}
-	\def\appendixname{ANEXO}                                    %{Anexo}
+	\def\appendixname{ANEXO}                  %{Anexo}
 	\def\proofname{Prueba}
 	\def\tablename{Tabla}
 	\def\figurename{Figura}
 \else
-	\def\contentsname{TABLE OF CONTENTS}         %{Table of Contents}
-	\def\listfigurename{LIST OF FIGURES}                  %{List of Figures}
-	\def\listtablename{LIST OF TABLES}                      %{List of Tables}
+	\def\contentsname{TABLE OF CONTENTS}      %{Table of Contents}
+	\def\listfigurename{LIST OF FIGURES}      %{List of Figures}
+	\def\listtablename{LIST OF TABLES}        %{List of Tables}
 	\def\refname{REFERENCES}
 	\def\bibname{REFERENCES}
-	\def\appendixname{APPENDIX}                              %{Appendix}
+	\def\appendixname{APPENDIX}               %{Appendix}
 	\def\proofname{Proof}
 \fi
 
 \def\chaptername{}
 \def\thechapter{\@arabic\c@chapter} % Number chapters with arabic numerals.
 
-\def\appendix{\par                                      %
-  \c@chapter\z@ \c@section\z@            %
+\def\appendix{\par                  %
+  \c@chapter\z@ \c@section\z@       %
   \let\chaptername\appendixname
   \def\thesection{\@Alph\c@section} % Number appendix with uppercase letters.
   \numberwithin{figure}{section}
@@ -111,9 +111,12 @@
   \newpage
   \chapter*{\appendixname}
   \phantom{.}
-  \vspace{8cm}
+  \vfill
   \hspace{5.7cm}
   \MakeUppercase{{\fontsize{12pt}{1em}\selectfont \bfseries\appendixname}}
+  \vfill
+  \vspace{3cm}
+  \thispagestyle{empty}
 }
 
 \numberwithin{section}{chapter}

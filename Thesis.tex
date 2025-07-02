@@ -1,19 +1,19 @@
 % Select one class
-%\documentclass{pucthesis}		% For DVI
-\documentclass[pdftex]{pucthesis}	% For pdfLaTeX
-%\documentclass[spanish]{pucthesis}		% For DVI, in spanish
-%\documentclass[pdftex,spanish]{pucthesis}	% For pdfLaTeX, in spanish
+%\documentclass{pucthesis}		              % For DVI
+\documentclass[pdftex]{pucthesis}	          % For pdfLaTeX
+%\documentclass[spanish]{pucthesis}		      % For DVI, in spanish
+%\documentclass[pdftex,spanish]{pucthesis}	  % For pdfLaTeX, in spanish
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%      Nota: si usas español, algunos nombres      %
-%      debes cambiarlos manualmente en este     %
-%        documento. En teoría, nunca deberías       %
-%           modificar el archivo pucthesis.cls              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nota: si usas español, algunos nombres %
+% debes cambiarlos manualmente en este   %
+% documento. En teoría, nunca deberías   %
+% modificar el archivo pucthesis.cls     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%
-%   Packages	 %
-%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+%	 Packages    %
+%%%%%%%%%%%%%%%%%%
 
 % Floats
 \usepackage{graphicx}
@@ -57,12 +57,7 @@
 \newtheorem{example}{\bf Example}[chapter]
 \newtheorem{remark}{Remark}[chapter]
 
-<<<<<<< HEAD
-\makeatletter
-  \setlength{\beftitle}{105\p@\@plus24\p@}
-  \setlength{\afttitle}{65\p@}
-\makeatother
-=======
+
 % En caso de que el título sea muy largo, se puede ajustar el espacio
 % antes y después de este en las dos primeras páginas para que quede centrado.
 
@@ -70,64 +65,64 @@
 %  \setlength{\beftitle}{105\p@\@plus24\p@}
 %  \setlength{\afttitle}{65\p@}
 %\makeatother
->>>>>>> origin/master
 
 \begin{document}
 
 \mdate{Month Day, Year}         % date manuscript changed
-\version{1}                                     % manuscript version #
+\version{1}                     % manuscript version #
 
-\title[(LONG THESIS TITLE)]
-   {\bf (LONG THESIS TITLE)}       
+\title[(LONG THESIS TITLE)]{\bf (LONG THESIS TITLE)}       
 \author[Author's Name]{Author's name}
 
 \address{Escuela de Ingenier\'ia\\
-                   Pontificia Universidad Cat\'olica de Chile\\ 
-                   Vicu\~na Mackenna 4860\\
-                  Santiago, Chile\\
-                  {\it Tel.\/} : 56 (2) 354-2000}
+         Pontificia Universidad Cat\'olica de Chile\\ 
+         Vicu\~na Mackenna 4860\\
+         Santiago, Chile\\
+         {\it Tel.\/} : 56 (2) 354-2000}
 \email{username@uc.cl}
 
-\facultyto    {the School of Engineering}
-%\department   {}
-\faculty                             {Faculty of Engineering}
-\degree                  {Master of Science in Engineering}  %   {Mag\'ister en Ciencias de la Ingenier\'ia}  %        
-                                 % or {Doctor in Engineering Sciences}    % {Doctor en Ciencias de la Ingenier\'ia}
-\advisor                            {Professor's name}
+\facultyto{the School of Engineering}
+%\department{}
+\faculty{Faculty of Engineering}
+\degree{Master of Science in Engineering} 
+    %  {Mag\'ister en Ciencias de la Ingenier\'ia}        
+    % {Doctor in Engineering Sciences}
+    % {Doctor en Ciencias de la Ingenier\'ia}
+\advisor{Professor's name}
 \committeememberA {Member A}
-\guestmemberA            {Member B}
-\ogrsmember                 {Member C}
-\subject                            {Structural Engineering}
-\date                                 {Month Year}
-\copyrightname             {Author's name}
-\copyrightyear               {MMXV}
-\dedication                      {Gratefully to my parents and siblings}
+\guestmemberA{Member B}
+\ogrsmember{Member C}
+\subject{Structural Engineering}
+\date{Month Year}
+\copyrightname{Author's name}
+\copyrightyear{MMXV}
+\dedication{Gratefully to my parents and siblings}
 
-%%%%%%%%%%%%%%%%%%%%
-%       PRELIMINARIES                              %
-%----------------------------------------------------%
-%      page i & ii: cover page                   %
-%      page iii: dedication                         %
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           PRELIMINARIES           %
+%-----------------------------------%
+%      page i & ii: cover page      %
+%      page iii: dedication         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NoChapterPageNumber
 \pagenumbering{roman}
 \maketitle
 
-%%%%%%%%%%%%%%%%%%%%
-%   EXTRA PAGES                                     %
-%----------------------------------------------------%
-%      page --: not used                             %
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         EXTRA PAGES         %
+%-----------------------------%
+%      page --: not used      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\newpage
 %\thispagestyle{empty}
 
 %----------------------------------------------------------------------%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%      page v: ACKNOWLEDGEMENTS                   %
-%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      page v: ACKNOWLEDGEMENTS      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \phantomsection \label{acknowledgements} % Comment if hyperref is unused
 \chapter*{ACKNOWLEDGEMENTS}           
@@ -137,12 +132,12 @@
 
 %----------------------------------------------------------------------%
 
-%%%%%%%%%%%%%%%%%%
-%          page v & up ---                      %
-%            Table of contents              %
-%            List of figures                     %
-%            List of tables                      %
-%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      page v & up ---        %
+%      Table of contents      %
+%      List of figures        %
+%      List of tables         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pdfbookmark{\contentsname}{toc}
 \tableofcontents
@@ -154,9 +149,9 @@
 
 %----------------------------------------------------------------------%
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%      page x & xi: ABSTRACT - RESUMEN        %
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      page x & xi: ABSTRACT - RESUMEN      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \phantomsection \label{abstract}
 \chapter*{ABSTRACT}
@@ -168,9 +163,9 @@
 \input{./chapters/resumen.tex}
 \cleardoublepage
 
-%%%%%%%%%%%%%
-%   TEXT  OF THESIS     %
-%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      TEXT  OF THESIS      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagenumbering{arabic}
 
@@ -186,19 +181,18 @@
 \chapter[CONCLUSIONS]{Conclusions}
 \input{./chapters/conclusions.tex}
 
-%%%%%%%%%%%%%
-%       REFERENCES        %
-%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       REFERENCES       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
 \phantomsection \label{references}
 \bibliographystyle{apacite}
 \renewcommand{\bibname}{REFERENCES}
 
-%%%% ACTIVAR SIGUIENTES 3 LINEAS SI POSTGRADO RECHAZA LA BIBLIOGRAFIA
-%\setlength{\bibleftmargin}{0em}
-%\setlength{\bibindent}{0em}
-%\setlength{\bibitemsep}{1em}
+\setlength{\bibleftmargin}{0em}
+\setlength{\bibindent}{0em}
+\setlength{\bibitemsep}{1em}
 
 
 \bibliography{Thesis}
